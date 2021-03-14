@@ -1,3 +1,4 @@
+[![Deploy to Github Pages](https://github.com/RoBlockHead/Testing-Actions/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/RoBlockHead/Testing-Actions/actions/workflows/main.yml)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
