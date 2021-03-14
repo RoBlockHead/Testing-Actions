@@ -23,16 +23,19 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - name: checkout branch
+      uses: actions/checkout@v2
+    - name: initialize node
+      uses: actions/setup-node@v2
 
       # Runs a single command using the runners shell
     - name: install node packages
-    - run: npm install
-    - run: npm build
+      run:  |
+        npm install
+        npm build
     - name: Deploy
-    - uses: peaceiris/actions-gh-pages@v3
-    - with:
+      uses: peaceiris/actions-gh-pages@v3
+      with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build  # default: public
         publish_branch: gh-pages
